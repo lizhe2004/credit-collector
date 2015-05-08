@@ -9,6 +9,7 @@ from urllib import urlencode
 import urllib2
 import cookielib
 import traceback
+import getpass
 
 class PointManager:
     def __init__(self,user,password):
