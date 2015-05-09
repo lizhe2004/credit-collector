@@ -5,7 +5,7 @@ Created on Dec 6, 2012
 
 @author: lizhe2004
 '''
-
+import getpass
 import sys
 print sys.getdefaultencoding()
 import rsa
