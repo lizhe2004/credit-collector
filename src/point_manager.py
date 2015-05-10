@@ -10,6 +10,7 @@ import urllib2
 import cookielib
 import traceback
 import getpass
+import argparse
 
 class PointManager:
     def __init__(self,user,password):
@@ -104,9 +105,14 @@ class PointManager:
         respond= content.read()
         print respond
         
+parser = argparse.ArgumentParser()
+parser.add_argument("-u","--user",required=True,help="user name in 51cto")
+parser.add_argument("-p","--password",required=True,help="password in 51cto")
+args = parser.parse_args()
+user = args.user
+password = args.password
 
-user = raw_input('user: ')
-password = getpass.getpass('password: ')        
+     
 pm = PointManager(user,password) 
 pm.login()
 pm.getfreecredits()
